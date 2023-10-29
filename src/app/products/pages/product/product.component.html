@@ -1,7 +1,16 @@
 <p>product works!</p>
 
-<products-price></products-price>
+<products-price
+*ngIf="isProductVisible"
+[price]="currentPrice"
+></products-price>
 <!--3 Agregar html para implementacion-->
 <button (click)="isProductVisible=!isProductVisible">
   Toggle
+</button>
+
+
+<!--7. Crear el html para incrementar y llamar al metodo increase-->
+<button (click)="increasePrice()">
+  +1
 </button>

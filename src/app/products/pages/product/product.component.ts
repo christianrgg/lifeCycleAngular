@@ -18,7 +18,7 @@ export class ProductComponent implements OnInit, OnChanges, DoCheck, AfterConten
 
   // 3. Se crea una propiedad para hacer un cambio en el template
   public isProductVisible:boolean = false;
-
+  public currentPrice: number = 10;
 
   // 2. Despues implementar todas las interfaces creadas. Tambien un constructor este tambien es un ciclo de vida
   constructor() {
@@ -58,4 +58,8 @@ export class ProductComponent implements OnInit, OnChanges, DoCheck, AfterConten
     console.log('ngOnInit')
   }
 
+  // 6. Crear el metodo que incrementara en 1
+  increasePrice(){
+    this.currentPrice++;
+  }
 }
